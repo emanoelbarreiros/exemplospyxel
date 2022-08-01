@@ -19,10 +19,10 @@ class Jogo:
         pyxel.run(self.update, self.draw)     
 
     def tratar_interacao_usuario(self):
-        if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
+        if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT):
             self.ponto_clique = (pyxel.mouse_x, pyxel.mouse_y)
         
-        if pyxel.btnr(pyxel.MOUSE_LEFT_BUTTON):
+        if pyxel.btnr(pyxel.MOUSE_BUTTON_LEFT):
             delta_x = self.ponto_clique[0] - pyxel.mouse_x
             delta_y = self.ponto_clique[1] - pyxel.mouse_y
             bola = Bola(pyxel.mouse_x, pyxel.mouse_y, delta_x//3, delta_y//3)

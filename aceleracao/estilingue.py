@@ -17,10 +17,10 @@ class Jogo:
         pyxel.run(self.update, self.draw)        
 
     def update(self):
-        if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
+        if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT):
             self.click_down = (pyxel.mouse_x, pyxel.mouse_y)
         
-        if pyxel.btnr(pyxel.MOUSE_LEFT_BUTTON):
+        if pyxel.btnr(pyxel.MOUSE_BUTTON_LEFT):
             delta_x = self.click_down[0] - pyxel.mouse_x
             delta_y = self.click_down[1] - pyxel.mouse_y
             bola = Bola(pyxel.mouse_x, pyxel.mouse_y, delta_x//8, delta_y//8)

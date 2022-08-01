@@ -127,7 +127,7 @@ class Inimigo:
 
 class Jogo:
     def __init__(self):
-        pyxel.init(255, 255, caption="Duel")
+        pyxel.init(255, 255, title="Duel")
         self.score = 0
         self.modo_jogo = INICIO
         self.contador_frames_acerto = 0
@@ -162,7 +162,7 @@ class Jogo:
         if self.modo_jogo == ATIRANDO:
             #detecta se houve tiro
             acertou_tiro = False
-            if pyxel.btnp(pyxel.MOUSE_LEFT_BUTTON):
+            if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT):
                 pyxel.play(0, 0)
                 #capture_image = gl.glReadPixels(pyxel.mouse_x, pyxel.height - pyxel.mouse_y, 1, 1, gl.GL_RGB, gl.GL_UNSIGNED_BYTE)
                 #print(capture_image)

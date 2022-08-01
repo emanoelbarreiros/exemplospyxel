@@ -70,7 +70,7 @@ class Aplicacao:
         pyxel.run(self.atualizar, self.desenhar)
 
     def atualizar(self):
-        if pyxel.btnr(pyxel.MOUSE_LEFT_BUTTON):
+        if pyxel.btnr(pyxel.MOUSE_BUTTON_LEFT):
             bola = Bola(eu.Point2(pyxel.mouse_x, pyxel.mouse_y), eu.Vector2(0, 0), self.gravidade, 0.8)
             self.bolas.append(bola)
 
