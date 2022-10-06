@@ -43,6 +43,7 @@ class Snake:
     def atualizar(self):
         # define a nova direcao da cobra
         if pyxel.btn(pyxel.KEY_RIGHT) and self.direcao != ESQUERDA:
+        #if pyxel.btn(pyxel.KEY_RIGHT):
             self.novaDirecao = DIREITA
         if pyxel.btn(pyxel.KEY_LEFT) and self.direcao != DIREITA:
             self.novaDirecao = ESQUERDA
@@ -107,9 +108,9 @@ class Snake:
 
                 #checar se a cobra passou por cima da comida
                 if self.comida_x == novaCabeca.x and self.comida_y == novaCabeca.y:
-                    self.engolida.append((self.comida_x, self.comida_y))                                                      
+                    self.engolida.append((self.comida_x, self.comida_y))
                     self.comida_x = random.randrange(0, pyxel.width, 8)
-                    self.comida_y = random.randrange(0, pyxel.width, 8)      
+                    self.comida_y = random.randrange(0, pyxel.width, 8)
                 else:
                     self.cobra.pop()
 
